@@ -15,6 +15,9 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/syntastic'
+Plug 'vim-ruby/vim-ruby'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
@@ -66,6 +69,9 @@ colorscheme codeschool
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
+let g:syntastic_javascript_checkers = ['jshint']
+let g:netrw_dirhistmax=0
+let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
 
 set expandtab
 set shiftwidth=2

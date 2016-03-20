@@ -4,10 +4,15 @@ alias ls="ls -GpF"
 alias gs="git status"
 
 export PS1="\e[1;37m\W\$ \e[0m"
-
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
+export EDITOR=nvim
+export VMAIL_VIM=nvim
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
+fi
+
+if [ -f $HOME/.profile ]; then
+  source $HOME/.profile
 fi
