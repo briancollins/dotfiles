@@ -6,7 +6,7 @@ HOMEDIR = File.expand_path(ENV['HOME'])
 
 class Symlinker
   def path
-    File.expand_path(File.join(File.dirname(__FILE__), 'home'))
+    File.expand_path(File.join(File.dirname(__FILE__), '..', 'home'))
   end
 
   def remove_links
