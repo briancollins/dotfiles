@@ -3,7 +3,7 @@ alias vi=nvim
 alias ls="ls -GpF"
 alias gs="git status"
 
-export PS1="\e[1;37m\W\$ \e[0m"
+export PS1="\[\e[1;37m\W\$\e[0m\] "
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export EDITOR=nvim
