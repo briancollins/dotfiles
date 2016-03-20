@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+HOMEDIR = File.expand_path(ENV['HOME'])
+
+class Symlinker
+  def path
+    File.expand_path(File.join(File.dirname(__FILE__), 'home'))
+  end
+
+  def remove_links
+    Dir.foreach(HOMEDIR) do |file|
+      link = File.join(HOMEDIR, file)
+      begin
+        target = File.readlink(link)
+        if File.identical?(path, File.dirname(target))
+          puts "Removing #{link} => #{target}"
+          File.delete(link)
+        end
+      rescue Errno::EINVAL
+      end
+    end
+  end
+
+  def link_files
+    Dir.foreach(path) do |file|
+      next if file == '.' || file == '..'
+      original = File.join(path, file)
+      target = File.join(HOMEDIR, ".#{file}")
+      puts "Symlinking #{target} => #{original}"
+      begin
+        File.symlink(original, target)
+      rescue Errno::EEXIST
+        puts "#{target} already exists"
+      end
+    end
+  end
+
+  def run!
+    options = {}
+    OptionParser.new do |opts|
+      opts.banner = 'Usage: symlink [options]'
+      opts.on('-r', '--remove', 'Remove symlinks') do
+        options[:remove] = true
+      end
+    end.parse!
+
+    if options[:remove]
+      self.remove_links
+    else
+      self.link_files
+    end
+  end
+end
+
+Symlinker.new.run!
