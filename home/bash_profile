@@ -2,6 +2,7 @@ alias vim=nvim
 alias vi=nvim
 alias ls="ls -GpF"
 alias gs="git status"
+alias gco="git checkout"
 
 export PS1="\[\e[1;37m\]\W\$\[\e[0m\] "
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -12,10 +13,7 @@ export VMAIL_VIM=nvim
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# keep all history
-export HISTCONTROL=ignoredups:erasedups
-shopt -s histappend
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export HISTSIZE=""
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
@@ -25,3 +23,4 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile
 fi
 
+export PATH="/usr/local/sbin:$PATH"

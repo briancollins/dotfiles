@@ -18,7 +18,9 @@ Plug 'scrooloose/syntastic'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
-
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
@@ -27,6 +29,8 @@ set novisualbell
 set noerrorbells
 set vb t_vb=
 set laststatus=2
+set ignorecase
+set smartcase
 
 set nobackup
 set nowritebackup
@@ -34,6 +38,7 @@ set noswapfile
 
 syntax enable
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 set wildignore+=.git,node_modules,tmp
 
@@ -50,6 +55,7 @@ map <leader>swh :topleft vnew<CR>
 map <leader>swl :botright vnew<CR>
 map <leader>swk :topleft new<CR>
 map <leader>swj :botright new<CR>
+map <leader>v :e ~/.config/nvim/init.vim<CR>
 
 " show tabs
 set listchars=tab:▸\ 
@@ -66,12 +72,15 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme codeschool
+let g:airline_theme="lucius"
+let g:airline_powerline_fonts = 1
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 let g:syntastic_javascript_checkers = ['jshint']
 let g:netrw_dirhistmax=0
 let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
+let g:terminal_scrollback_buffer_size = 100000
 
 set expandtab
 set shiftwidth=2
@@ -88,3 +97,5 @@ autocmd BufNewFile,BufRead * set expandtab
 autocmd BufNewFile,BufRead *.rs set shiftwidth=4
 autocmd BufNewFile,BufRead *.rs set tabstop=4
 autocmd BufNewFile,BufRead *.rs set softtabstop=4
+
+hi statusline gui=none
