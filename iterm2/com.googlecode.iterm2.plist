@@ -807,6 +807,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/projects/dotfiles/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -841,22 +843,96 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>995 91 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>96 318 606 456 0 0 1440 877 </string>
+	<string>269 410 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 11 717 860 0 0 1440 877 </string>
+	<string>161 525 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>666 221 570 452 0 0 1440 877 </string>
+	<string>12 162 885 607 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 10</key>
+	<string>-545 525 585 352 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 11</key>
+	<string>-545 525 585 352 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 12</key>
+	<string>-545 525 585 352 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 13</key>
+	<string>-545 436 585 373 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 14</key>
+	<string>22 139 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 15</key>
+	<string>749 470 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 16</key>
+	<string>554 181 1039 573 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 17</key>
+	<string>14 175 1081 599 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 18</key>
+	<string>9 198 892 612 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 19</key>
+	<string>489 425 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>124 420 570 452 0 0 1440 877 </string>
+	<string>0 60 1263 815 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 20</key>
+	<string>686 476 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 21</key>
+	<string>567 453 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 22</key>
+	<string>48 156 808 534 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 23</key>
+	<string>808 135 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 24</key>
+	<string>358 488 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 25</key>
+	<string>40 285 682 586 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 26</key>
+	<string>722 249 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 27</key>
+	<string>743 226 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 28</key>
+	<string>764 203 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 29</key>
+	<string>99 180 1256 690 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>130 304 570 452 0 0 1440 877 </string>
+	<string>634 169 724 573 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 30</key>
+	<string>393 157 983 625 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 31</key>
+	<string>14 165 1116 581 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 32</key>
+	<string>65 56 752 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 33</key>
+	<string>14 334 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 34</key>
+	<string>870 422 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 35</key>
+	<string>870 399 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 36</key>
+	<string>870 376 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 37</key>
+	<string>593 99 724 542 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 38</key>
+	<string>870 330 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 39</key>
+	<string>63 287 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>246 409 570 452 0 0 1440 877 </string>
+	<string>1 513 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 40</key>
+	<string>625 63 815 573 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 41</key>
+	<string>442 131 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 42</key>
+	<string>48 76 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>69 387 570 452 0 0 1440 877 </string>
+	<string>470 77 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>323 295 570 452 0 0 1440 877 </string>
+	<string>0 462 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>247 142 941 612 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>-881 92 921 690 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 9</key>
+	<string>-545 506 585 352 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1445,11 +1521,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Menlo-Regular 11</string>
+			<string>Droid Sans Mono Slashed for Powerline 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 11</string>
+			<string>DroidSansMonoSlashedForPowerline 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1630,22 +1706,16 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
-	<integer>0</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncSuppressAnnyoingBellOffer</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>480177569.933635</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>480163963.11970699</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>480163963.12034202</real>
+	<real>466381100.79635799</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1702,15 +1772,15 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/nightly.xml</string>
+	<string>http://iterm2.com/appcasts/testing3.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2016-03-20T10:52:05Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1750,6 +1820,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>2.9.20160319-nightly</string>
+	<string>2.9.20151001</string>
 </dict>
 </plist>
