@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " plugins
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " set cwd to git repo root
 Plug 'airblade/vim-rooter'
@@ -17,6 +17,7 @@ Plug 'tpope/vim-repeat'
 Plug 'scrooloose/syntastic'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
