@@ -36,6 +36,7 @@ set smartcase
 set nobackup
 set nowritebackup
 set noswapfile
+set hidden
 
 syntax enable
 filetype plugin indent on
