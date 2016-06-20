@@ -4,4 +4,5 @@ OPTIONS=pettype:none
 OPTIONS=color
 OPTIONS=msghistory:500
 OPTIONS=name:brisy
-OPTIONS=showscore
+OPTIONS=showscore,showexp,time
+OPTIONS=boulder:0
