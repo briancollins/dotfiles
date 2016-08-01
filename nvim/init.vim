@@ -22,6 +22,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'kchmck/vim-coffee-script'
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
@@ -63,6 +64,10 @@ map <leader>v :e ~/.config/nvim/init.vim<CR>
 set listchars=tab:▸\ 
 set list
 
+" jsx
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
 " show position in file
 set ruler
 set number
@@ -79,7 +84,6 @@ let g:airline_powerline_fonts = 1
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
-let g:syntastic_javascript_checkers = ['jshint']
 let g:netrw_dirhistmax=0
 let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
 let g:terminal_scrollback_buffer_size = 100000
