@@ -23,6 +23,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kchmck/vim-coffee-script'
+Plug 'wavded/vim-stylus'
+Plug 'nginx/nginx', {'rtp': 'contrib/vim'}
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
@@ -76,7 +78,7 @@ set cc=81
 
 " color scheme
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 set background=dark
 colorscheme codeschool
 let g:airline_theme="lucius"
@@ -103,5 +105,6 @@ autocmd BufNewFile,BufRead * set expandtab
 autocmd BufNewFile,BufRead *.rs set shiftwidth=4
 autocmd BufNewFile,BufRead *.rs set tabstop=4
 autocmd BufNewFile,BufRead *.rs set softtabstop=4
+autocmd BufRead,BufNewFile *.styl.erb setlocal filetype=stylus.eruby
 
 hi statusline gui=none
