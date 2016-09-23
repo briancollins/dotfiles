@@ -3,6 +3,7 @@ alias vi=nvim
 alias ls="ls -GpF"
 alias gs="git status"
 alias gco="git checkout"
+alias docker='docker-machine start > /dev/null && eval $(docker-machine env) && unalias docker && docker'
 
 export PS1="\[\e[1;37m\]\W\$\[\e[0m\] "
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
