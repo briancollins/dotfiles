@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kchmck/vim-coffee-script'
 Plug 'wavded/vim-stylus'
+Plug 'rodjek/vim-puppet'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim'}
 call plug#end()
 
