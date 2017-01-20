@@ -71,6 +71,10 @@ set list
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
+
+let g:puppet_align_hashes = 0
+
 " show position in file
 set ruler
 set number
