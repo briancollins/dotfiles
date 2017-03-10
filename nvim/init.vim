@@ -71,6 +71,8 @@ set list
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
+" finds the best eslint for the current file. since I have my cwd set to the git
+" root, and sometimes projects within a monorepo have their own package.json
 function! NearestEslint()
   let check_path = expand('%:p:h')
   while !executable(check_path . '/node_modules/.bin/eslint') && check_path != '/'
