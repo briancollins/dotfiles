@@ -71,6 +71,20 @@ set list
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
+function! NearestEslint()
+  let check_path = expand('%:p:h')
+  while !executable(check_path . '/node_modules/.bin/eslint') && check_path != '/'
+    let check_path = fnamemodify(check_path, ':h')
+  endwhile
+
+  if executable(check_path . '/node_modules/.bin/eslint')
+    let b:syntastic_javascript_eslint_exec = check_path . '/node_modules/.bin/eslint'
+  end
+endfunction
+
+autocmd BufWritePre *.js call NearestEslint()
+autocmd BufWritePre *.jsx call NearestEslint()
+
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 
 let g:puppet_align_hashes = 0
