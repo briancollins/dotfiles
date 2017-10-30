@@ -1,7 +1,9 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " plugins
-Plug 'ctrlpvim/ctrlp.vim'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " set cwd to git repo root
 Plug 'airblade/vim-rooter'
@@ -14,10 +16,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -26,6 +28,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'wavded/vim-stylus'
 Plug 'rodjek/vim-puppet'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim'}
+Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
@@ -47,6 +50,8 @@ filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
 set wildignore+=.git,node_modules,tmp
+set wildmode=longest,list,full
+set wildmenu
 
 let mapleader=","
 map <leader>a :Ag<space>
@@ -62,6 +67,7 @@ map <leader>swl :botright vnew<CR>
 map <leader>swk :topleft new<CR>
 map <leader>swj :botright new<CR>
 map <leader>v :e ~/.config/nvim/init.vim<CR>
+map <C-p> :Files<CR>
 
 " show tabs
 set listchars=tab:▸\ 
@@ -69,7 +75,8 @@ set list
 
 " jsx
 let g:jsx_ext_required = 0
-let g:syntastic_javascript_checkers = ['eslint']
+let g:ale_linters = { 'javascript': ['eslint', 'flow'], 'jsx': ['eslint', 'flow'], 'ruby': ['rubocop', 'mri'], 'eruby': ['erubis', 'rubocop'] }
+let g:javascript_plugin_flow = 1
 
 " finds the best eslint for the current file. since I have my cwd set to the git
 " root, and sometimes projects within a monorepo have their own package.json
@@ -105,8 +112,6 @@ colorscheme codeschool
 let g:airline_theme="lucius"
 let g:airline_powerline_fonts = 1
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
 let g:netrw_dirhistmax=0
 let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
 let g:terminal_scrollback_buffer_size = 100000
@@ -129,3 +134,5 @@ autocmd BufNewFile,BufRead *.rs set softtabstop=4
 autocmd BufRead,BufNewFile *.styl.erb setlocal filetype=stylus.eruby
 
 hi statusline gui=none
+
+set mouse=a
