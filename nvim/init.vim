@@ -21,17 +21,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'kchmck/vim-coffee-script'
 Plug 'wavded/vim-stylus'
 Plug 'rodjek/vim-puppet'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim'}
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
-
-let g:deoplete#enable_at_startup = 1
 
 nnoremap <C-L> :nohl<CR><C-L>
 
@@ -87,9 +82,6 @@ let g:ale_linters = { 'javascript': ['eslint', 'flow'], 'jsx': ['eslint', 'flow'
 let g:javascript_plugin_flow = 1
 let g:ale_fixers = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 
-autocmd BufWritePre *.js call NearestEslint()
-autocmd BufWritePre *.jsx call NearestEslint()
-
 let g:puppet_align_hashes = 0
 
 " show position in file
@@ -103,8 +95,6 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set termguicolors
 set background=dark
 colorscheme codeschool
-let g:airline_theme="lucius"
-let g:airline_powerline_fonts = 1
 
 let g:netrw_dirhistmax=0
 let g:terminal_scrollback_buffer_size = 100000
