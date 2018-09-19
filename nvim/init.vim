@@ -17,7 +17,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'w0rp/ale'
 Plug 'vim-ruby/vim-ruby'
-Plug 'pangloss/vim-javascript'
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
@@ -29,6 +28,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
+inoremap jj <esc>
 
 set novisualbell
 set noerrorbells
@@ -59,6 +59,7 @@ nnoremap <leader><leader> :b#<CR>
 map <leader>a :Ag<space>
 map <leader>t :tabnew<CR>
 map <leader>f :ALEFix<CR>
+map <leader>r :Rg 
 
 map <leader>sh :leftabove vnew<CR>
 map <leader>sl :rightbelow vnew<CR>
@@ -81,6 +82,7 @@ let g:jsx_ext_required = 0
 let g:ale_linters = { 'javascript': ['eslint', 'flow'], 'jsx': ['eslint', 'flow'], 'ruby': ['rubocop', 'mri'], 'eruby': ['erubis', 'rubocop'] }
 let g:javascript_plugin_flow = 1
 let g:ale_fixers = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
+let g:ale_ruby_rubocop_executable = 'bundle'
 
 let g:puppet_align_hashes = 0
 
@@ -119,3 +121,11 @@ autocmd BufRead,BufNewFile *.styl.erb setlocal filetype=stylus.eruby
 hi statusline gui=none
 
 set mouse=a
+
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
