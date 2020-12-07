@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 " plugins
 
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " set cwd to git repo root
@@ -11,13 +12,16 @@ Plug 'airblade/vim-rooter'
 " highlight trailing whitespace
 Plug 'bronson/vim-trailing-whitespace'
 
+Plug 'kana/vim-textobj-user'
+Plug 'rhysd/vim-textobj-ruby'
+
 Plug 'flazz/vim-colorschemes'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'vim-ruby/vim-ruby'
-Plug 'chemzqm/vim-jsx-improve'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'kchmck/vim-coffee-script'
@@ -25,6 +29,8 @@ Plug 'wavded/vim-stylus'
 Plug 'rodjek/vim-puppet'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim'}
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 nnoremap <C-L> :nohl<CR><C-L>
@@ -121,11 +127,3 @@ autocmd BufRead,BufNewFile *.styl.erb setlocal filetype=stylus.eruby
 hi statusline gui=none
 
 set mouse=a
-
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)

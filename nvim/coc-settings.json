@@ -1,0 +1,13 @@
+{
+    "languageserver": {
+        "sorbet-lsp": {
+            "command": "pay",
+            "args": [
+                "exec",
+                "scripts/bin/typecheck",
+                "--lsp"
+            ],
+            "filetypes": ["ruby"]
+        }
+    }
+}
