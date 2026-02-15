@@ -1,13 +1,8 @@
 {
-    "languageserver": {
-        "sorbet-lsp": {
-            "command": "pay",
-            "args": [
-                "exec",
-                "scripts/bin/typecheck",
-                "--lsp"
-            ],
-            "filetypes": ["ruby"]
-        }
-    }
+  "coc.preferences.formatOnSaveFiletypes": ["rust"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
