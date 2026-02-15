@@ -1,21 +1,29 @@
+# PATH
+export PATH="$HOME/.local/bin:/opt/homebrew/opt/openssl@3/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# Editor
+export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim
+
+# Aliases
 alias ls="ls -GpF"
 alias gs="git status"
 alias gco="git checkout"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-messages --glob "!.git/*"'
+alias grep="grep --color=auto"
 
+# Prompt
 export PS1="\[\e[1;37m\]\W\$\[\e[0m\] "
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
-export EDITOR=nvim
-export VMAIL_VIM=nvim
 
+# History (unlimited, shared across sessions)
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 shopt -s histappend
 shopt -s cmdhist
 shopt -s lithist
+PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
+# Tools
+eval "$(rbenv init -)"
+source "$HOME/.cargo/env"
